@@ -1,17 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'; //Traeme todo lo que haya exportado desde el paquete "react" que está en node_modules (porque no especifiqué la dirección) y guarda ese valor en la variable "React" (con mayuscula)
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+import Header from "./Header"
+import Main from "./Main"
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function App() {
+    return (
+        <>
+            <Header/>
+            <Main/>
+        </>
+    )
+}
+
+export default App
