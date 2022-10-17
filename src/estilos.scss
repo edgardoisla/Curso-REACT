@@ -1,0 +1,38 @@
+$color-primary: rgb(77, 144, 175);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html , body, #root {
+    height: 100%;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#main-header {
+    background-color: $color-primary;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+}
+
+main {
+    flex-grow: 1;
+    padding: 1 rem;
+}
+
+footer{
+    background-color: $color-primary;
+    padding: 1 rem;
+    text-align: center;
+}
