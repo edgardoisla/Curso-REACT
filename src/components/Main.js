@@ -1,11 +1,15 @@
 import React from 'react'
-import Button from '@mui/material/Button';
+import ContadorContainer from './ContadorContainer';
+
 
 const Main = () => {
+
+   
+
     return (
         <main>
             <h2>Home</h2> <br/>
-            <Button variant="contained">Click me</Button>
+            <ContadorContainer/>
         </main>
     )
 }
