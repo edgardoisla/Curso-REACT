@@ -1,17 +1,15 @@
 import React from "react"
 import Navbar from "./Navbar"
-import ItemListContainer from "./ItemListContainer";
+import {Link} from "react-router-dom";
 
-function Header(greeting) {
+function Header() {
     
     return (
         <header id="main-header" className="header">
-            <h1>REACT</h1>
-            <ItemListContainer
-                nombre ="Edgardo"
-                apellido="Isla"  
+            <Link to ='/'>
+                <h1 className="Link__home">REACT</h1>
+            </Link>
             
-            />
             <Navbar/>
         </header>
     )

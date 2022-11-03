@@ -1,13 +1,13 @@
 import React from 'react'
 import IconButton from '@mui/material/IconButton';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 
 const CartWidget = () => {
     
     return (
-    <IconButton color="primary" aria-label="add to shopping cart">
-        <AddShoppingCartIcon />
+    <IconButton color="inherit" aria-label="add to shopping cart">
+        <ShoppingCartIcon/>
     </IconButton>
     )
 }

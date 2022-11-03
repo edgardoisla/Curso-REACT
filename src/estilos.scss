@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
 $color-primary: rgb(77, 144, 175);
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arimo', sans-serif;
+    text-decoration: none;
 }
 
 html , body, #root {
@@ -16,9 +20,13 @@ html , body, #root {
 
 }
 
+.link{
+    color: aliceblue;
+    padding: .5rem;
+}
+
 #main-header {
     background-color: $color-primary;
-    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,4 +47,42 @@ footer{
 
 .nav__link {
     margin-left: 1rem;
+    color: aliceblue;
+}
+
+.Link__home{
+    color: aliceblue;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 2rem 1rem;
+    padding: 3rem 0;
+}
+
+.card {
+    padding: 0.5rem;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7)
+}
+
+.card__img {
+    width: 100%;
+    height: 300px;
+    object-fit:cover;
+    margin: 1rem 0;
+}
+
+.card__price{
+    font-size:medium;
+    padding-top: .3rem;
+}
+.card__button {
+    width: 100%;
+    border:none;
+    padding: 0.5rem 0;
+    border-radius: 3px;
+    background-color: $color-primary;
+    cursor: pointer;
 }

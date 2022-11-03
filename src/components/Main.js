@@ -1,6 +1,9 @@
-import React from 'react'
-import ContadorContainer from './ContadorContainer';
-
+import React from 'react';
+import {Routes , Route} from 'react-router-dom';
+import Home from './Home';
+import Carrito from './Carrito';
+import ItemListContainer from './ItemListContainer' 
+import Categorias from './Categorias'
 
 const Main = () => {
 
@@ -8,8 +11,12 @@ const Main = () => {
 
     return (
         <main>
-            <h2>Home</h2> <br/>
-            <ContadorContainer/>
+            <Routes>
+                <Route path='/' element={<Home/>}/>
+                <Route path='/productos' element={<ItemListContainer/>}/>
+                <Route path='/categorias' element={<Categorias/>}/>
+                <Route path='/carrito' element={<Carrito/>}/>
+            </Routes>
         </main>
     )
 }

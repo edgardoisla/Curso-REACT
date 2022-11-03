@@ -1,20 +1,18 @@
 import React from 'react'
-import Navbar from "./Navbar"
+
 
 const Footer = () => {
   return (
-    <footer>
-        <div className="redes">
-            <a href="https://www.facebook.com/">facebook</a>
-            <a href="https://www.instagram.com/">insatgram</a>
-            <a href="https://www.twitter.com/">twitter</a>
+    <footer className='footer'>
+        <div className="redes footer__column">
+            <a className='footer__link link' href="https://www.facebook.com/">facebook</a>
+            <a className='footer__link link' href="https://www.instagram.com/">insatgram</a>
+            <a className='footer__link link' href="https://www.twitter.com/">twitter</a>
         </div>
-        <div>
+        <div className="redes footer__column">
             <p>(c) 2022 - Todos los derechos reservados  </p>
         </div>
-        <div>
-            <Navbar/>
-        </div>
+        
     </footer>
   )
 }
