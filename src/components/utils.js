@@ -6,27 +6,18 @@ for (let i = 0; i < 10; i++){
     stockProductos.push(randProduct())
 }
 
-export const getProducts = ()=>{
+const generatePromise = (op,time = 2000) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(op)
+        },time)
+    })
+
+}
+
+    export const getProducts = ()=> generatePromise(stockProductos)
+
+    export const getProductByCategoryId = (id) => generatePromise(stockProductos.filter(item=>item.category===id))
+        
     
 
-
-    let pedido = new Promise((resolve) => {
-        setTimeout(()=>{
-            resolve(stockProductos)
-        },2000)
-        
-    })
-
-    return pedido
-}
-
-export const getProductByCategoryId = (id) =>{
-
-    let pedido = new Promise((resolve) => {
-        setTimeout(()=>{
-            resolve(stockProductos.filter(item=>item.category === id))
-        },2000)
-        
-    })
-    return pedido
-}
