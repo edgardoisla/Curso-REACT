@@ -1,11 +1,13 @@
 import { useState } from 'react';
 
-const ItemCount = () => {
+const ItemCount = ({handleAdd}) => {  // 3) recibo el callback como prop
 
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(1);
 
-    const confirmar=()=>{
+    const handleConfirmar=()=>{
         
+      handleAdd(count);
+
     }
 
   return (
@@ -15,7 +17,7 @@ const ItemCount = () => {
             <p>{count}</p>
             <button onClick={()=>{setCount(count+1)}}>+</button>
         </div>
-        <button onClick={confirmar}>Confirmar</button>
+        <button onClick={handleConfirmar}>Confirmar</button>
     </div>
   )
 }
