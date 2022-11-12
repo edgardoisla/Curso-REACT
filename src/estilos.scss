@@ -92,3 +92,42 @@ footer{
     justify-content: space-between;
     align-items: center;
 }
+
+.counter-actions button{
+    background-color: $color-primary;
+    border:none;
+    padding: 0.3rem 1rem;
+    margin: 0.5rem ;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
+}
+.counter-actions{
+    justify-content: center;
+}
+
+.detail-flex img{
+    width: 300px;
+    height: 300px;
+    object-fit:cover;
+}
+
+.detail-flex > div {
+    padding: 1rem;
+}
+
+.detail-flex > div > div {
+    margin: 1rem 0
+};
+
+.detail-flex > div > div >button {
+    display: block;
+    margin: auto;
+    background-color: $color-primary;
+    border:none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
+}
+

@@ -4,14 +4,6 @@ const ItemCount = () => {
 
     const [count, setCount] = useState(0);
 
-    const sumar=()=> {
-        setCount(count+1);
-    }
-
-    const restar=()=>{
-        setCount(count-1);
-    }
-
     const confirmar=()=>{
         
     }
@@ -19,9 +11,9 @@ const ItemCount = () => {
   return (
     <div>
         <div className='counter-actions'>
-            <button onClick={sumar}>+</button>
+            <button onClick={()=>{setCount(count-1)}}>-</button>
             <p>{count}</p>
-            <button onClick={restar}>-</button>
+            <button onClick={()=>{setCount(count+1)}}>+</button>
         </div>
         <button onClick={confirmar}>Confirmar</button>
     </div>
