@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { contexto } from './App';
+import { contexto } from './MiProvider';
 import  {Link} from 'react-router-dom'
 
 const CartWidget = () => {
@@ -12,7 +12,7 @@ const CartWidget = () => {
         <Link to='/carrito'>
             
             <ShoppingCartIcon className='cart__cartWidget'/>
-            <span>{resultado.cantidad}</span> 
+            {<span>{resultado.cantidad}</span>} 
                         
         </Link>
     )
