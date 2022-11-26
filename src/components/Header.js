@@ -7,7 +7,7 @@ function Header() {
     return (
         <header id="main-header" className="header">
             <Link to ='/'>
-                <h1 className="Link__home">REACT</h1>
+                <h1 className="Link__home">DISTRICAR</h1>
             </Link>
             
             <Navbar/>

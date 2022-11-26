@@ -1,15 +1,15 @@
 import {Link} from 'react-router-dom'
+//import {db} from './firebase'
 
-
-const Item = ({title, image, price, id}) => {
+const Item = ({nombre, imagen, precio, id}) => {
 
 
   return (
     <article className='product__card card'>
     
-        <h1 className='card__title'>{title}</h1>
-        <h2 className="card__price">${price}</h2>
-        <img src={image} alt={title} className='card__img'/>
+        <h1 className='card__title'>{nombre}</h1>
+        <h2 className="card__price">${precio}</h2>
+        <img src={imagen} alt={nombre} className='card__img'/>
         <button className="card__button">
           <Link to= {'/item/' +id}>Detalle</Link>
         </button>

@@ -1,9 +1,8 @@
 import React, {useEffect,useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemList from './ItemList'
-import {getProductByCategoryId, getProducts} from './utils'
-
-
+import {db} from './firebase'
+import {collection,getDocs,query,where} from 'firebase/firestore'
 
 const ItemListContainer=()=>{
 
@@ -12,24 +11,36 @@ const ItemListContainer=()=>{
 
       
     useEffect(()=>{
-        console.log(cat)
+
         if (cat){
 
-            getProductByCategoryId(cat)
-            .then(response=>{
-                setItems(response)
+            
+            const productosCollection = collection (db,'productos')
+            console.log(productosCollection)
 
-            })
-            .catch((error) =>{
-                
-            })
+            const filtrar = query(productosCollection, where('categoria','==', cat))
+            const consulta = getDocs(filtrar)
+            
+            consulta
+                .then((resultado) => {
+                    const productos = resultado.docs.map(doc => ({ ...doc.data(), id: doc.id }))
+                    setItems(productos)
+                })
+                .catch((error) => {
+                    console.log(error)
+                })
 
         }  else{
-            getProducts()
-              .then((response)=>{
-                  setItems(response)
-              })
-              .catch((error) =>{ 
+            const productosCollection = collection (db,'productos')
+            const consulta = getDocs(productosCollection)
+
+            consulta
+                .then((resultado) => {
+                    const productos = resultado.docs.map(doc => ({ ...doc.data(), id: doc.id }))
+                    setItems(productos)
+                })
+                .catch((error) => {
+                    console.log(error)
               })
         }
     },[cat])
