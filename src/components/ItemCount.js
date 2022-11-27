@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const ItemCount = ({handleAdd}) => {  // 3) recibo el callback como prop
+const ItemCount = ({handleAdd}) => {  
 
     const [count, setCount] = useState(1);
 

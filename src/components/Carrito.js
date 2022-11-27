@@ -2,9 +2,10 @@ import React, { useRef, useState } from 'react'
 import { db } from './firebase'
 import { addDoc, collection, serverTimestamp  } from 'firebase/firestore'
 
+
 const Carrito = () => {
 
-  //const valorDelContexto = useCarrito()
+
     const refName = useRef() 
     const refAge = useRef()
     const [id, setId] = useState('')

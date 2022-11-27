@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# PROYECTO "DISTRICAR" CURSO REACT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyecto del e-commerce de "Districar" desarrollado durante el curso de React en [Coderhouse](https://www.coderhouse.com/) Comisión 34790 y bajo la tutoría del docente Horacio Gutierrez . 
 
-## Available Scripts
+## INSTALACION Y USO
 
-In the project directory, you can run:
+Realizar un $ git clone del repositorio: https://github.com/edgardoisla/Curso-REACT.git
+
+Una vez en el directorio del proyecto ejeuctar:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Esto lanzará el servidor de desarrollo.\ [http://localhost:3000](http://localhost:3000) para visualizar el proyecto.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `Ver productos`
 
-### `npm run build`
+Para visualizar todos los productos disponibles dar click en la barra de navegación en la sección [productos](http://localhost:3000/productos).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `Ver categorias`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para visualizar todos los productos disponibles de alguna categoria en particular dar click en la barra de navegación en la `categoria` solicitada.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `Ver producto y agregar al carrito`
 
-### `npm run eject`
+Para visualizar el stock de algún producto y seleccionarlo para agregar al carrito se debe dar click en el botón `detalle` de dicho producto luego dar click en `confirmar` para habilitar el botón `Agregar al carrito` que una vez clickeado confirmará la orden y asignara un ID de pedido al usuario creando a la vez un documento de la orden en la colección `orders` de Firebase.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### `Ver categorias`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Para visualizar todos los productos disponibles dar click en la barra de navegación en la sección [productos](http://localhost:3000/productos).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## TECNOLOGIAS APLICADAS
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Para este proyecto se utilizaron las siguientes tecnologías
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [Create React App](https://create-react-app.dev/)
+- [React router](https://reactrouter.com/)
+- [React context](https://reactjs.org/docs/context.html)
+- [Mui](https://mui.com/)
+- [Emotion](https://emotion.sh/)
+- [Firebase](https://console.firebase.google.com/)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+**Nota: Durante el transcurso del proyecto se utilizaron diferentes librerias para el testeo de las mismas como Toastify y React Boostrap que luego fueron desinstaladas de las dependencias.**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Proxmos pasos:
 
-### Making a Progressive Web App
++ Adaptación del site original de Districar aplicando React 
++ Generación de nuevo contenido del site.
++ Creación y registro de todo el catálogo de Districar.
++ Hosting del nuevo site.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

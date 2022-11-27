@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom'
-//import {db} from './firebase'
+
 
 const Item = ({nombre, imagen, precio, id}) => {
 

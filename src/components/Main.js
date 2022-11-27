@@ -3,7 +3,6 @@ import {Routes , Route} from 'react-router-dom';
 import Home from './Home';
 import Carrito from './Carrito';
 import ItemListContainer from './ItemListContainer' 
-//import Categorias from './Categorias'
 import ItemDetailContainer from './ItemDetailContainer'
 
 const Main = () => {

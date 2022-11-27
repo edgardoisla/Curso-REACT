@@ -1,5 +1,5 @@
-import React, {useEffect,useState } from 'react'
-import { useParams } from 'react-router-dom'
+import React, {useEffect,useState} from 'react'
+import {useParams} from 'react-router-dom'
 import ItemList from './ItemList'
 import {db} from './firebase'
 import {collection,getDocs,query,where} from 'firebase/firestore'
@@ -7,16 +7,15 @@ import {collection,getDocs,query,where} from 'firebase/firestore'
 const ItemListContainer=()=>{
 
     const [items, setItems] = useState([])
+
     const {cat} = useParams()
 
       
     useEffect(()=>{
 
+        const productosCollection = collection (db,'productos')
+        
         if (cat){
-
-            
-            const productosCollection = collection (db,'productos')
-            console.log(productosCollection)
 
             const filtrar = query(productosCollection, where('categoria','==', cat))
             const consulta = getDocs(filtrar)
@@ -31,7 +30,7 @@ const ItemListContainer=()=>{
                 })
 
         }  else{
-            const productosCollection = collection (db,'productos')
+            
             const consulta = getDocs(productosCollection)
 
             consulta
